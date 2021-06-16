@@ -1,4 +1,5 @@
 server.port : 9003
+spring.application.name: guest-service
 
 spring.datasource.url: jdbc:postgresql://localhost:5432/GuestService
 spring.datasource.driverClassName: org.postgresql.Driver
