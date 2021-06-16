@@ -53,7 +53,7 @@ public class AddressMapper {
     private Address convertModelToEntity(AddressDetails addressDetails) {
         Optional<Address> optionalAddress = addressRepository.findById(addressDetails.getId());
 
-        Address address = optionalAddress.isPresent() ? optionalAddress.get() : null;
+        Address address = optionalAddress.isPresent() ? optionalAddress.get() : new Address();
 
         if (StringUtils.isNotBlank(addressDetails.getAddressType())) {
             address.setAddressType(AddressType.valueOf(addressDetails.getAddressType()));
