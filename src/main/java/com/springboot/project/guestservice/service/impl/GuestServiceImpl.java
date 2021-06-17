@@ -6,6 +6,7 @@ import com.springboot.project.guestservice.mapper.GuestMapper;
 import com.springboot.project.guestservice.model.GuestDetails;
 import com.springboot.project.guestservice.repository.GuestRepository;
 import com.springboot.project.guestservice.service.GuestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Slf4j
 @Transactional
 @Service
 public class GuestServiceImpl implements GuestService {
