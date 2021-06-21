@@ -1,0 +1,23 @@
+{
+  "guestId": "bff7c415bdab4563a7ec2c4e09e0b28e",
+  "guestName": "Virat",
+  "contact": 9090989897,
+  "addressDetails": [
+    {
+      "id": 26,
+      "addressType": "HOME",
+      "street": "KPHB",
+      "city": "Hyderabad",
+      "zipcode": 500082,
+      "state": "Telangana"
+    },
+    {
+      "id": 27,
+      "addressType": "OFFICE",
+      "street": "Gachibowli",
+      "city": "Hyderabad",
+      "zipcode": 500090,
+      "state": "Telangana"
+    }
+  ]
+}

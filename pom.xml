@@ -123,6 +123,11 @@
 			<artifactId>xstream</artifactId>
 			<version>1.4.10</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-contract-verifier</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -142,6 +147,25 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
+				<version>3.0.1</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<goals>
+							<goal>convert</goal>
+							<goal>generateStubs</goal>
+							<goal>generateTests</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<testFramework>JUNIT5</testFramework>
+					<baseClassForTests>com.springboot.project.guestservice.GuestServiceApplicationTests</baseClassForTests>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
