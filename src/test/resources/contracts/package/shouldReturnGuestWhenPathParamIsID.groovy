@@ -11,5 +11,8 @@ Contract.make {
     response {
         body($(consumer(file("response.json"))))
         status 200
+        headers {
+            contentType(applicationJson())
+        }
     }
 }
